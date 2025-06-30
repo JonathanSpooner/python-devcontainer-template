@@ -8,10 +8,10 @@ This repository provides a streamlined way to kickstart new Python projects with
     Navigate to your desired projects directory on your remote server (via SSH) and clone this repository.
     ```bash
     cd ~/projects/
-    git clone https://github.com/your-username/python-devcontainer-template.git my-new-project
+    git clone https://github.com/JonathanSpooner/python-devcontainer-template.git my-new-project
     cd my-new-project
     ```
-    *(Replace `your-username` with your GitHub username and `my-new-project` with your desired project name.)*
+    *(Replace `my-new-project` with your desired project name.)*
 
 2.  **Open in VS Code:**
     Open the `my-new-project` folder in VS Code using the Remote - SSH extension.
