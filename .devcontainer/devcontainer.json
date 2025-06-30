@@ -23,7 +23,7 @@
 
     // Use 'postCreateCommand' to run commands after the container is created.
     // This is where we'll install pyscaffold and run 'putup .'.
-    "postCreateCommand": "git config --global user.email \"devcontainer@example.com\" && git config --global user.name \"Dev Container User\" && pip install pyscaffold pytest-cov && PROJECT_NAME=$(basename \"$(pwd)\") && putup \"$PROJECT_NAME\" && cd \"$PROJECT_NAME\" && pip install -e '.[dev,test]'"
+    "postCreateCommand": "rm -rf .git && git config --global user.email \"devcontainer@example.com\" && git config --global user.name \"Dev Container User\" && pip install pyscaffold pytest-cov && PROJECT_NAME=$(basename \"$(pwd)\") && putup \"$PROJECT_NAME\" && cd \"$PROJECT_NAME\" && pip install -e '.[dev,test]'"
 
     // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
     // "remoteUser": "vscode"
