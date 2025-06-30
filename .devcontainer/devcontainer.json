@@ -1,0 +1,30 @@
+// .devcontainer/devcontainer.json
+{
+    "name": "Python Project Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/python:latest",
+    // Or specify a version, e.g., "mcr.microsoft.com/devcontainers/python:3.12"
+
+    "features": {
+        // You can add other features here later if needed, e.g., "ghcr.io/devcontainers/features/git:1": {}
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the Python extension to the container
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance" // Pylance is often useful for Python development
+            ]
+        }
+    },
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // This is where we'll install pyscaffold and run 'putup .'.
+    "postCreateCommand": "git config --global user.email \"email@example.com\" && git config --global user.name \"username_here\" && pip install pyscaffold && PROJECT_NAME=$(basename \"$(pwd)\") && putup \"$PROJECT_NAME\""
+
+    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+    // "remoteUser": "vscode"
+}
